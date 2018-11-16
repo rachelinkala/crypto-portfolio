@@ -17,6 +17,7 @@ class Coin < ApplicationRecord
     Coin.find_or_create_y(coin_params) do |coin|
       coin.price = match[:quotes][:USD][:price]
       coin.last_fetched = DateTime.now
+    end
   end
 
 end

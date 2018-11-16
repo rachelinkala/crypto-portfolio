@@ -6,7 +6,7 @@ import { addCoin } from '../reducers/coins'
 class CoinForm extends React.Component {
   state = { coin: '' }
 
-  handleChange = (e) =>{
+  handleChange = (e) => {
     const { name, value } = e.target
     this.setState({ [name]: value })
   }
@@ -16,7 +16,6 @@ class CoinForm extends React.Component {
     const { dispatch } = this.props
     const { coin } = this.state
     dispatch(addCoin(coin))
-    this.setState({ coin: '' })
   }
 
   render() {
